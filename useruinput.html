@@ -7,9 +7,16 @@
 </head>
 <body>
     <form>
-        <input type="text" placeholder="Enter name" id="name"><br>
-        <input type="text" placeholder="Enter age" id="age"><br>
-        <button onclick="return data();"> Submit </button>
+        <div id="errorname"></div>
+        <input type="text" placeholder="Enter name" id="name" onblur="s()"><br>
+
+        <div id="erroremail"></div>
+        <input type="email" placeholder="Enter email" id="email" onblur="s()"><br>
+        
+        <input type="tel" placeholder="Enter Mobile number" id="mobile"><br>
+        <input type="password" placeholder="Enter password" id="password"><br>
+        <input type="password" placeholder="Enter confirm password" id="cpassword"><br>
+        <button onclick="return registration()"> Submit </button>
     </form>
     <script src="./userinput.js"></script>
 </body>
