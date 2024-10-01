@@ -27,10 +27,15 @@ function registration(){
     
 }
 
-function s(){
-    let selectedinput = document.querySelector('#name');
-    let selecterrorname = document.querySelector('#errorname');
-    selecterrorname.innerHTML = ""
+function s(arg){
+    console.log(arg)
+    let selectedinput = document.querySelector(`#${arg}`);
+    console.log(selectedinput);
     selectedinput.style.borderColor = "black";
     selectedinput.style.outlineColor = "black";
+
+
+    let selectederrordiv = document.querySelector(`#error${arg}`);
+    selectederrordiv.innerHTML = "";
+
 }
