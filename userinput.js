@@ -23,6 +23,28 @@ function registration(){
         selectname.style.outlineColor = "red"
         return false;
     }
+    else if(!(email.includes('@') && email.includes(".com"))){
+        document.querySelector('#erroremail').innerHTML = "Please enter valid email";
+        let selectname = document.querySelector('#email');
+        selectname.style.borderColor = "red"
+        selectname.style.outlineColor = "red"
+        return false;
+    }
+    else if(mobile.length !== 10){
+        document.querySelector('#errormobile').innerHTML = "mobile number should be 10 digit";
+        let selectname = document.querySelector('#mobile');
+        selectname.style.borderColor = "red"
+        selectname.style.outlineColor = "red"
+        return false;
+    }
+    else if(isNaN(mobile)){
+        document.querySelector('#errormobile').innerHTML = "mobile number should integer only";
+        let selectname = document.querySelector('#mobile');
+        selectname.style.borderColor = "red"
+        selectname.style.outlineColor = "red"
+        return false;
+    }
+
 
     
 }
